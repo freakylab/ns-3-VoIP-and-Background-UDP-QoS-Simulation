@@ -67,13 +67,13 @@ main(int argc, char* argv[])
     PointToPointHelper p2p;
     p2p.SetDeviceAttribute("DataRate", StringValue("50Mbps"));
     p2p.SetChannelAttribute("Delay", StringValue("1ms"));
-    p2p.SetQueue("ns3::DropTailQueue", "MaxSize", StringValue("100p"));
+    p2p.SetQueue("ns3::DropTailQueue", "MaxSize", StringValue("1p"));
     NetDeviceContainer d0d2 = p2p.Install(NodeContainer(nodes.Get(0), nodes.Get(2)));
     NetDeviceContainer d1d2 = p2p.Install(NodeContainer(nodes.Get(1), nodes.Get(2)));
 
     p2p.SetDeviceAttribute("DataRate", StringValue("10Mbps"));
     p2p.SetChannelAttribute("Delay", StringValue("25ms"));
-    p2p.SetQueue("ns3::DropTailQueue", "MaxSize", StringValue("100p"));
+    p2p.SetQueue("ns3::DropTailQueue", "MaxSize", StringValue("1p"));
     NetDeviceContainer d3d2 = p2p.Install(NodeContainer(nodes.Get(3), nodes.Get(2)));
 
     TrafficControlHelper tc;
