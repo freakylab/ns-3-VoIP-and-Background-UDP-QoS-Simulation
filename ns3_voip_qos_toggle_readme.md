@@ -37,13 +37,13 @@ You run the program via the terminal from the root of your ns-3 directory. Argum
 **Example 1: Run simulation WITHOUT QoS (FIFO)**
 In this scenario, VoIP packets compete equally with 12 Mbit/s of background traffic over a 10 Mbit/s link.
 ```bash
-./ns3 run "scratch/voip-background-toggle-v8 --qos=0 --background=12.0"
+./ns3 run "scratch/voip-background-toggle-v8 --qos=0"
 ```
 
 **Example 2: Run simulation WITH QoS (Strict Priority)**
 Here, VoIP packets are given absolute priority, which should result in minimal delay and zero packet loss for the voice stream.
 ```bash
-./ns3 run "scratch/voip-background-toggle-v8 --qos=1 --background=12.0"
+./ns3 run "scratch/voip-background-toggle-v8 --qos=1"
 ```
 
 ## Available Parameters (Arguments)
